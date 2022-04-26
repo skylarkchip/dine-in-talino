@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "CINZEL";
+  src: url("../fonts/cinzel/Cinzel-Regular.ttf");
+}
+
+@font-face {
+  font-family: "RALEWAY";
+  src: url("../fonts/raleway/Raleway-Regular.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+#hero {
+  height: 70vh;
+  @apply bg-bg-mobile bg-no-repeat bg-cover bg-bottom sm:bg-bg-desktop sm:bg-center lg:h-screen;
+}
+
+.nav-item {
+  @apply font-raleway;
+}
+
+.header-div {
+  @apply w-full absolute bottom-0 mb-2 p-5 sm:bg-bgMediumBlack sm:p-14 sm:w-1/2 sm:mb-28 lg:w-1/3 lg:mb-10;
+}
+
+.header-primary {
+  @apply font-cinzel text-white text-6xl;
+}
+
+.header-primary__main-mobile {
+  @apply block font-raleway text-2xl uppercase font-medium sm:hidden;
+}
+
+.header-primary__main-desktop {
+  @apply block;
+}
+
+.menuDrawer {
+  @apply hidden;
+  transition: all 0.5s ease;
+}
+
+.is-active {
+  @apply flex;
+}
+
+/* MAIN */
+
+#main {
+  @apply bg-bgMediumBlack;
+}
+
+.menu-item {
+  @apply font-raleway font-medium leading-10 text-sm px-5 hover:bg-lightGold;
+}
+
+.menu-item.selected {
+  @apply bg-lightGold border-t-0 border-l-8 px-3 border-l-regularGold;
+}
+
+/* FOOTER */
+
+#footer {
+  @apply bg-black px-8 pt-14 pb-5 sm:px-12 sm:py-20;
+}
+
+.footer-menu-item {
+  @apply font-raleway text-white text-xs lg:text-sm;
+}
